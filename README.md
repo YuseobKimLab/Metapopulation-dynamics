@@ -14,6 +14,8 @@ Shell script to run simulation is /scripts/run0.sh
 
 (2) write_pinp.py
 The shell script first write input file by running "write_pinp.py".
+In neutral model, nNonsy is fixed to 0.
+In positive selection and metapopulation model, nNonsy is the same as the number of epitope.
 
 (3) command to run simulation
 Then as written in the shell script, the command to run simulation is:

@@ -81,7 +81,7 @@ We use the command line below to generate sequence files:
 
 This code will run the python scripts below:
 
-- trans_io.py (transcript 0 and 1 in A or C)  
+- trans_io.py (translate 0 and 1 in A or C)  
 - pick_6mon_30_io.py (Pick randomly 30 sequences each 6 months)
 - separate_io.py (The program generates sequences for 2 segments, this script separates the 2 segments)
 

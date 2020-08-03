@@ -1,13 +1,16 @@
-# Metapopulation-dynamics
+# Metapopulation dynamics
 
-This is the pipeline for the study of metapopulation dynamics.
+This is the pipeline for the study of metapopulation dynamics. This program simulate viral sequences that are generated under the evolutionary conditions of seasonal influenza viruses. This model have been developed by Kim and Kim (2016) and allow viral sequences to evolve under genetic drift, migration, and positive selection. 
 
-1. Simulation code
 
-compile command: 
+##1. Simulation code
+
+This program is intended to be built and run in Linux. We used gcc to compile and build a program.
+'''
 gcc -g FluRaMeta3a.c -o fluraMeta3a_ -lm
+'''
 
-2. Run simulation
+##2. Run simulation
 
 (1) run.sh
 Shell script to run simulation is /run.sh 

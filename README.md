@@ -1,6 +1,6 @@
 # Metapopulation dynamics
 
-This is the pipeline for the study of metapopulation dynamics. This program simulate viral sequences that are generated under the evolutionary conditions of seasonal influenza viruses. This model have been developed by Kim and Kim (2016) and allow viral sequences to evolve under genetic drift, migration, and positive selection. 
+This is the pipeline for the study of metapopulation dynamics. This program simulate viral sequences that are generated under the evolutionary conditions of seasonal influenza viruses. This model have been developed by Kim and Kim (2016) and allow viral sequences to evolve under genetic drift, migration, and positive selection. The program can also simulate rearrangement between two segments.
 
 
 ## 1. Building the simulation code
@@ -68,19 +68,24 @@ simulation_program input_file output_file(sequence output) seed > text_file_for_
 Running simulation once as above command generates 50 replicates. 
 The command is run 6 times to generate 300 replicates.
 
-3. Generate sequence files from simulation output
+## 3. Generate sequence files from simulation output
 
-Using /runScript.sh run below python scripts
+We use the command line:
+```
+./runScript.sh 
+```
 
-trans_io.py
-pick_6mon_30_io.py
-separate_io.py
+This code will run the python scripts below which will generate sequence files:
+
+trans_io.py (transcript 0 and 1 in A or C) 
+pick_6mon_30_io.py (Pick randomly 30 sequences each 6 months)
+separate_io.py (The program generates sequences for 2 segments, this script separates the 2 segments)
 
 
-4. Calculate metrics
+## 4. Calculate metrics
 
-Calulate time -corrected pi and Fst with /Calculate_Fst.R
-Draw the Time Corrected Mismatch distribution with /TCMD.R
+Calulate time-corrected pi and Fst with the R script "Calculate_Fst.R"
+Draw the time-corrected Mismatch distribution with the R script "TCMD.R"
 
 
 

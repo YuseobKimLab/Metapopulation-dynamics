@@ -25,15 +25,15 @@ for rdc in range(argrdc, argrdc+1):
 
 		outf = open(filehead+str(kmax)+"_"+str(argRA)+".inp", "w")
 	
-		r_mig = 0
-		outf.write("nNonsy "+str(20)+'\n')
-		outf.write("nSynon "+str(1680)+'\n')
-		outf.write("Ndeme 8"+'\n')
-		outf.write("Kmax "+ str(kmax) +'\n')
-		outf.write("DinY 80"+'\n')
-		outf.write("Tburn 40000"+'\n')
-		outf.write("Tsample 80000"+'\n')
-		outf.write("r_mut 0.0001"+'\n')
+		r_mig = 0 #rate of migration
+		outf.write("nNonsy "+str(10)+'\n') #number of non-synonymous site
+		outf.write("nSynon "+str(1690)+'\n') #number of synonymous site
+		outf.write("Ndeme 8"+'\n') #number of demes
+		outf.write("Kmax "+ str(kmax) +'\n') #maximum carrying capacity
+		outf.write("DinY 80"+'\n') #Number of generation in one year
+		outf.write("Tburn 40000"+'\n') 
+		outf.write("Tsample 80000"+'\n') 
+		outf.write("r_mut 0.0001"+'\n') #rate of mutation
 		outf.write("r_mig"+'\n')
 		matrix = make_rmig_matrix(r_mig)
 		outf.write(matrix)
@@ -46,7 +46,7 @@ for rdc in range(argrdc, argrdc+1):
 		outf.write("bottleneckSize 0"+'\n')
 		outf.write("doRecomb " + str(argRA) + '\n')
 		outf.write("numEpitope "+str(argepi)+"\n")
-		outf.write("sel_co 0.05\n")
+		outf.write("sel_co 0.1\n") #coefficient of selection for positive selection
 		outf.write("reduced_u " + str(rdc) + "\n") 
-		outf.write("sel_d 0.0\n")
+		outf.write("sel_d 0.0\n") #coefficient of selection for negative selection
 		outf.close()

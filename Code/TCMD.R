@@ -70,7 +70,7 @@ piS1
 png(file = "MismatchAll_300.png", width = 1500, height = 1000,  pointsize = 30)
 
 
-# Calcul TCMD
+# Calculation TCMD
 ##########################################################
 
 DataS2 <- numeric()

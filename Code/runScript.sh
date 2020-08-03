@@ -9,7 +9,7 @@ filehead=fluraMeta3a_0_0
 filehead1=seg1_fluraMeta3a_0_0
 filehead2=seg2_fluraMeta3a_0_0
 
-# 1. Sequence files and pi, D
+# 1. Sequence files
 python trans_io.py $filehead $startRepl $endRepl
 python pick_6mon_30_io.py $filehead $startRepl $endRepl
 python separate_io.py $filehead $startRepl $endRepl
@@ -17,7 +17,7 @@ python separate_io.py $filehead $startRepl $endRepl
 rm *fasta
 
 
-#Calculate metrics
+# 2. Calculate metrics
 R CMD BATCH Calculate_Fst.R
 R CMD BATCH TCMD.R
 

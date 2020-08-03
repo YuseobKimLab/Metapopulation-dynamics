@@ -7,10 +7,6 @@ library("kSamples")
 library("ade4")
 
 
-#setwd("E:/Influenza Project/Scripts/Files/Model 1/300 days/File 13")
-
-
-
 #########################################
 # Read Observed Data files
 

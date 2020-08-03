@@ -24,10 +24,8 @@ In this file, you have to specify the number of epitope (i), the maximum carryin
 ### (2) write input file write_pinp.py
 The shell script first write input file by running "write_pinp.py" which specify the model and parameters for simulations and write the input file "_.inp".
 
-In neutral model, nNonsy (Number of non-synonymous site) is fixed to 0 and sel_co (coefficient of selection) is also equal 0.
-
-In metapopulation model, nNonsy is the same as the number of epitope and sel_co has to be specify.
-
+In neutral model, nNonsy (Number of non-synonymous site) is fixed to 0 and sel_co (coefficient of selection) is also equal 0.  
+In metapopulation model, nNonsy is the same as the number of epitope and sel_co has to be specify.  
 In both model, r_mig (rate of migation) has also to be specify.
 
 
@@ -71,24 +69,21 @@ Then as written in the shell script, the command to run simulation is:
 ```
 ./simulation_program input_file output_file(sequence output) seed > text_file_for_more_information
 ```
-Running simulation once as above command generates 50 replicates.
-
+Running simulation once as above command generates 50 replicates.  
 The command is run 6 times to generate 300 replicates.
 
 ## 3. Generate sequence files from simulation output
 
-We use the command line:
+We use the command line below to generate sequence files:
 ```
 ./runScript.sh 
 ```
 
-This code will run the python scripts below which will generate sequence files:
+This code will run the python scripts below:
 
-trans_io.py (transcript 0 and 1 in A or C) 
-
-pick_6mon_30_io.py (Pick randomly 30 sequences each 6 months)
-
-separate_io.py (The program generates sequences for 2 segments, this script separates the 2 segments)
+- trans_io.py (transcript 0 and 1 in A or C)  
+- pick_6mon_30_io.py (Pick randomly 30 sequences each 6 months)
+- separate_io.py (The program generates sequences for 2 segments, this script separates the 2 segments)
 
 
 ## 4. Calculate metrics

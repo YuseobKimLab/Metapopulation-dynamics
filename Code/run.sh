@@ -33,9 +33,7 @@ python write_pinp.py $progname $i $j $k
 ./$progname $progname$j$u$k.inp $progname$j$u$k$u$four.out 425410 > $progname$j$u$k$u$four.txt
 ./$progname $progname$j$u$k.inp $progname$j$u$k$u$five.out 554241 > $progname$j$u$k$u$five.txt
 ./$progname $progname$j$u$k.inp $progname$j$u$k$u$six.out 628043 > $progname$j$u$k$u$six.txt
-#python fsim_trans.py $progname$j$u$k$u
-#python runcalc.py $progname$j$u$k
-#rm *.fasta
+
 
 k=`expr $k + $stepk`
 done

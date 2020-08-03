@@ -5,7 +5,7 @@ This is the pipeline for the study of metapopulation dynamics. This program simu
 
 ## 1. Building the simulation code
 
-This program is intended to be built and run in Linux. We used gcc to compile and build the program.
+This program is intended to be built and run in Linux. We use gcc to compile and build the program.
 
 ```
 gcc -g FluRaMeta3a.c -o fluraMeta3a_ -lm

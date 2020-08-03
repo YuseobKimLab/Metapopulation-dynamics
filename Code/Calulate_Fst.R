@@ -1,8 +1,6 @@
 library("ape")
 library("seqinr")
 library("reshape2")
-library("tidyr")
-library("Rmisc")
 
 
 fileNames1 <- list.files(pattern = "\\_test1.fas$")
